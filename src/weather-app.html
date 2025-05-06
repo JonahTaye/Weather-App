@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="weather-card">
+        <div class="today">
+            <div class="location">
+                <span id="city">Buckarest</span>,
+                <span id="country">Romania</span>
+            </div>
+            <img class="today-icon">
+            <div class="today-temp">
+                <div class="avg-temp">
+                    <span id="todays-temp">19</span>&#176;
+                    <span id="unit">C</span>
+                </div>
+                <div class="today-other-info">
+                    <div class="feels-like">Feels like 
+                        <span id="today-feelslike">18</span>&#176;
+                        <span id="unit">C</span>
+                    </div>
+                    <div class="temp-maxmin">
+                        <span id="temp-max">22</span>&#176;
+                        <span id="unit">C</span>
+                        <span id="temp-max">14</span>&#176;
+                        <span id="unit">C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="addtional-info">
+            <div class="buttons-section">
+                <div class="search-area">
+                    <input type="text" id="search">
+                    <button type="submit" id="search-btn"><img src="#" alt="search"></button>
+                </div>
+                <button class="change-unit">&#176;C</button>
+            </div>
+            <div class="today-add-info">
+                <div class="add-info">
+                    <div class="left-section">
+                        <img src="" alt="rain-icon">
+                        <div class="desc">Rain</div>
+                    </div>
+                    <div><span id="prec">77.5</span>%</div>
+                </div>
+                <div class="add-info">
+                    <div class="left-section">
+                        <img src="" alt="wind-icon">
+                        <div class="desc">Wind</div>
+                    </div>
+                    <div><span id="wind">11</span><span id="wind-unit">km/h</span></div>
+                </div>
+                <div class="add-info">
+                    <div class="left-section">
+                        <img src="" alt="uvindex-icon" id="uv-index-icon">
+                        <div class="desc">UV Index</div>
+                    </div>
+                    <div id="uv-index">High</div>
+                </div>
+                <div class="add-info">
+                    <div class="left-section">
+                        <img src="" alt="humidity-icon">
+                        <div class="desc">Humidity</div>
+                    </div>
+                    <div><span id="humidity">71.5</span>%</div>
+                </div>
+            </div>
+            <div class="upcoming-forecast">
+                <div class="header">Upcoming Forecast</div>
+                <div class="card-container">
+                    <div class="day-card">
+                        <div class="day">Mon</div>
+                        <div class="upcoming-prec">
+                            <img src="" alt="preciptation">
+                            <div><span id="upcoming-prec">98</span>%</div>
+                        </div>
+                        <img id="upcoming-condition" src="" alt="">
+                        <div class="upcoming-temp">
+                            <span id="upcoming-temp">22</span>&#176;
+                            <span id="unit">C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
