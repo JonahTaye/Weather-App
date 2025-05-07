@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5rem;
+    padding: 1rem;
+    background-color: rgb(111, 143, 212);
+}
+
+.today, .today-other-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.weather-card img {
+    width: max(12rem, 8vw);
+}
+
+.search-area img {
+    width: max(2rem, 2vw);
+}
+.avg-temp {
+    font-size: max(2rem, 4.5vw);
+}
+
+.location {
+    font-size: max(2rem, 4vw);
+}
+
+.additional-info, .left-section {
+    display: flex;
+}
+
+.upcoming-prec {
+    display: inline-flex;
+    gap: 1rem;
+    justify-self: start;
+}
+
+.precip-display {
+    display: inline-flex;
+    align-items: center;
+}
+
+.additional-info {
+    gap: 1.5rem;
+}
+
+.add-info {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+}
+
+.add-info * {
+    display: inline-flex;
+    align-items: center;
+}
+
+.add-info *:last-child {
+    justify-content: flex-end;
+}
+
+.left-section img {
+    width: max(2rem, 3.5vw);
+}
+
+.today-add-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.4rem;
+    column-gap: 2rem;
+}
+
+.additional-info {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buttons-section {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+}
+
+.buttons-section {
+    gap: 2rem;
+    grid-template-columns: 1fr auto;
+}
+
+.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    transition: all ease-in;
+}
+
+.search-area {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+}
+
+input, button {
+    all: unset;
+    border: 0.1rem solid black;
+}
+
+input {
+    display: none;
+    width: 0;
+}
+
+.upcoming-forecast {
+    display: grid;
+    gap: 1rem;
+}
+
+.header {
+    font-size: max(1.5rem, 2.5vw);
+}
+
+.upcoming-condition, .upcoming-temp {
+    display: flex;
+}
+
+.day-card {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    justify-items: center;
+    grid-auto-columns: 1fr 1fr 1fr 1fr;
+}
+
+.day {
+    justify-self: start;
+}
+
+.day-card img {
+    width: max(2rem, 3vw);
+}
+
+.upcoming-prec img {
+    width: max(2rem, 2.5vw);
+}
+
+.upcoming-temp {
+    justify-self: start;
+}
+
