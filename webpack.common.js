@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/front-page.html",
+      template: "./src/weather-app.html",
     }),
   ],
   module: {
