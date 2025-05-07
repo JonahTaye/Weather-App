@@ -21,5 +21,8 @@
       "webpack.dev.js",
       "webpack.prod.js"
     ]
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
   }
 }
