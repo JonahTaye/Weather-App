@@ -9,6 +9,11 @@ export function displayWeather (days, location) {
   displayUpcoming(days)
 }
 
+export function displayError () {
+  const weatherCard = document.querySelector('.weather-card')
+  weatherCard.innerHtml = 'Errorr'
+}
+
 function displayLocation (location) {
   const cityCard = document.getElementById('city')
   const countryCard = document.getElementById('country')
@@ -131,6 +136,8 @@ function displayUVIndex (uvIndex) {
 function displayUpcoming (days) {
   const container = document.querySelector('.card-container')
   const card = document.querySelector('.day-card')
+
+  container.innerHTML = ''
 
   for (let i = 1; i <= 6; i++) {
     const day = days[i]
