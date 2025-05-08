@@ -1,6 +1,14 @@
 import { formatRelative } from 'date-fns'
 
 export function displayWeather (days, location) {
+  const weatherCard = document.querySelector('.weather-card')
+  const loadingScreen = document.querySelector('.loading-screen')
+  const error = document.querySelector('.error')
+
+  weatherCard.style.display = 'grid'
+  loadingScreen.style.display = 'none'
+  error.style.display = 'none'
+
   const today = days[0]
   displayLocation(location)
   displayTodayIcon(today.icon)
@@ -11,7 +19,20 @@ export function displayWeather (days, location) {
 
 export function displayError () {
   const weatherCard = document.querySelector('.weather-card')
-  weatherCard.innerHtml = 'Errorr'
+  const loadingScreen = document.querySelector('.loading-screen')
+  const error = document.querySelector('.error')
+
+  loadingScreen.style.display = 'none'
+  weatherCard.style.display = 'grid'
+  error.style.display = 'block'
+}
+
+export function displayLoading () {
+  const weatherCard = document.querySelector('.weather-card')
+  const loadingScreen = document.querySelector('.loading-screen')
+
+  weatherCard.style.display = 'none'
+  loadingScreen.style.display = 'flex'
 }
 
 function displayLocation (location) {
