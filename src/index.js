@@ -26,7 +26,7 @@ function changeUnit () {
   const units = document.querySelectorAll('#unit')
   const windUnit = document.querySelector('#wind-unit')
 
-  if (unit.textContent === 'C') {
+  if (unit.textContent === 'C' || unit.textContent === '') {
     unitSetterGetter.setter('us')
     units.forEach(function (unit) { unit.textContent = 'F' })
     windUnit.textContent = 'mph'
