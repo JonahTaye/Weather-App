@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,14 +13,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .weather-card {
     display: grid;
     grid-auto-flow: column;
     gap: 5rem;
-    padding: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
     background-color: rgb(111, 143, 212);
+}
+
+.loading-screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: max(2rem, 8vw);
 }
 
 .today, .today-other-info {
@@ -40,6 +51,15 @@ body {
 
 .location {
     font-size: max(2rem, 4vw);
+    font-weight: 600;
+    text-wrap: nowrap;
+    display: inline-flex;
+}
+
+#city {
+    max-width: 11ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .additional-info, .left-section {
@@ -106,7 +126,9 @@ body {
 .input-section {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: end;
+    align-items: end;
     transition: all ease-in;
 }
 
@@ -118,12 +140,46 @@ body {
 
 input, button {
     all: unset;
-    border: 0.1rem solid black;
 }
 
 input {
+    border: 0.1rem solid black;
     display: none;
     width: 0;
+    height: 70%;
+    border-radius: 2rem;
+    padding-left: 0.8rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+#search-btn {
+    border: none;
+    margin-left: 0.3rem;
+    padding-top: 0.2rem;
+    cursor: pointer;
+}
+
+#change-unit {
+    border: 0.15rem solid black;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#change-unit:hover {
+    background-color: rgb(86, 120, 192);
+}
+
+.error {
+    display: none;
+    color: rgb(236, 48, 48);
+    align-self: flex-start;
 }
 
 .upcoming-forecast {
@@ -133,6 +189,7 @@ input {
 
 .header {
     font-size: max(1.5rem, 2.5vw);
+    font-weight: 600;
 }
 
 .upcoming-condition, .upcoming-temp {
