@@ -6,6 +6,9 @@
     <title>Weather App</title>
 </head>
 <body>
+    <div class="loading-screen">
+        <div class="header">Loading....</div>
+    </div>
     <div class="weather-card">
         <div class="today">
             <div class="location">
@@ -35,7 +38,10 @@
         <div class="additional-info">
             <div class="buttons-section">
                 <div class="search-area">
-                    <div class="input-section"><input type="text" id="search"></div>
+                    <div class="input-section">
+                        <div class="error">Enter a valid city</div>
+                        <input type="text" id="search" placeholder="Enter a city...">
+                    </div>
                     <button type="submit" id="search-btn"><img id="search-btn" src="icons/search/magnify.svg" alt="search"></button>
                 </div>
                 <button id="change-unit">&#176;<span id="unit">C</span></button>
